@@ -1,0 +1,10 @@
+CREATE TABLESPACE CALYPSO16 DATAFILE '/opt/oracle/oradata/XE/CALYPSO16.dbf' SIZE 1024M Autoextend on EXTENT MANAGEMENT LOCAL;
+
+
+CREATE USER calypso16 IDENTIFIED BY calypso16 DEFAULT TABLESPACE CALYPSO16 TEMPORARY TABLESPACE temp;
+
+Alter tablespace CALYPSO add datafile '/opt/oracle/oradata/XE/CALYPSO16.dbf' SIZE 1024M Autoextend on;
+
+CREATE OR REPLACE DIRECTORY DATA_PUMP_DIR AS '/opt/oracle/admin/XE/dpdump/';
+
+

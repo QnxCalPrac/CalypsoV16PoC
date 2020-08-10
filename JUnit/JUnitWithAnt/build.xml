@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<project basedir="." default="test" name="JUnitTest">
+<property name="testdir" location="test"/>
+<property name="srcdir" location="src"/>
+<property name="full-compile" location="true"/>
+<path id="classpath.base"/>
+<path id="classpath.test">
+<pathelement location="lib/junit-4.10.jar"/>
+<pathelement location="${testdir}"/>
+<pathelement location="${srcdir}"/>
+<path refid="classpath.base"/>
+</path>
+
+
+<target name="clean">
+<delete verbose="${full-compile}">
+<fileset dir ="${testdir}" includes="**/*.class"/>
+</delete>
+</target>
+
+<target name="compile" depends="clean">
+<javac verbose="${full-compile}" destdir="${testdir}" srcdir="${srcdir}">
+<classpath refid ="classpath.test"/>
+</javac>
+</target>
+
+<target name="test" depends="compile">
+<junit>
+<classpath refid="classpath.test"/>
+<formatter usefile="false" type ="brief"/>
+<test name ="JUnit.JUnitTestCaseRunner"
+</junit>
+</target>
+
+
+</project>
