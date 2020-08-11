@@ -1,4 +1,4 @@
-package JUnit;
+package calypsox.tk.util;
 import java.util.Collection;
 import com.calypso.tk.core.LegalEntity;
 import com.calypso.tk.refdata.LegalEntityAttribute;
@@ -27,9 +27,9 @@ public class JUnitTester {
 
 	public static void checkLE() throws Exception
 	{
-		LegalEntity le1 = dsCon.getRemoteReferenceData().getLegalEntity("JUNIT_LE");
+		LegalEntity le1 = dsCon.getRemoteReferenceData().getLegalEntity("JUNIT_TEST");
 		System.out.println(le1+le1.getName());
-		if (le1.getName().equalsIgnoreCase("JUNITTEST_LE"))
+		if (le1.getName().equalsIgnoreCase("JUNITTEST_TEST"))
 			System.out.println("Legal Entity Found");
 		else
 			System.out.println("Legal Entity does not exist");
@@ -37,7 +37,7 @@ public class JUnitTester {
 
 	public static void checkLEA() throws Exception
 	{
-		LegalEntity le = dsCon.getRemoteReferenceData().getLegalEntity("JUNIT_LE");
+		LegalEntity le = dsCon.getRemoteReferenceData().getLegalEntity("JUNIT_TEST");
 		System.out.println(le+le.getName());
 		Collection leattrs = le.getLegalEntityAttributes();
 		System.out.println(leattrs);
@@ -54,16 +54,16 @@ public class JUnitTester {
 		roles.add("Broker");
 
 		LegalEntity le1 = new LegalEntity();
-		le1.setCode("JUNIT_LE");
+		le1.setCode("JUNIT_TEST");
 		le1.setCountry("TEST");
-		le1.setName("JUNITTEST_LE");
+		le1.setName("JUNITTEST_TEST");
 		le1.setRoleList(roles);
 		le1.setStatus("Enabled");
 		le1.setClassification(true);
 		int le1ID = dsCon.getRemoteReferenceData().save(le1);		
 
 
-		//Saving Attributes for JUNITTEST_LE
+		//Saving Attributes for JUNITTEST_TEST
 		saveLEA(le1ID, "TEST1", "TEST1");
 		saveLEA(le1ID, "TEST2", "TEST2");
 		saveLEA(le1ID, "TEST3", "TEST3");
