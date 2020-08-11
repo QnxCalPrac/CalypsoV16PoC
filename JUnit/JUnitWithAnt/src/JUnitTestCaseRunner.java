@@ -15,7 +15,7 @@ import com.calypso.tk.service.DSConnection;
 import com.calypso.tk.util.ConnectionUtil;
 
 
-// Test case runner
+// Test case runner - only
 
 public class JUnitTestCaseRunner {
 	public static DSConnection dsCon = null;
