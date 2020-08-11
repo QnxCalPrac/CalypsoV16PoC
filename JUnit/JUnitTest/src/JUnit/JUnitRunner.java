@@ -9,6 +9,8 @@ import com.calypso.tk.refdata.LegalEntityAttribute;
 import com.calypso.tk.service.DSConnection;
 import com.calypso.tk.util.ConnectionUtil;
 
+// TODO : added comments for runner
+
 public class JUnitRunner {
 	public static DSConnection dsCon = null;
 
