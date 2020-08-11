@@ -1,5 +1,6 @@
 package calypsox.tk.util;
 import java.util.Collection;
+import java.util.Vector;
 import com.calypso.tk.core.LegalEntity;
 import com.calypso.tk.refdata.LegalEntityAttribute;
 import com.calypso.tk.service.DSConnection;
