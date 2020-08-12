@@ -10,7 +10,7 @@ import com.calypso.tk.core.Trade;
 import com.calypso.tk.service.DSConnection;
 
 public class CheckCustomSwapTradeRule implements WfTradeRule{
-	private static final String LOG= CheckcustomTradeRule.class.getSimpleName();
+	private static final String LOG= CheckCustomSwapTradeRule.class.getSimpleName();
 	private static final String MESSAGE= "Notional less than 5 millions";
 	private static final double Nominal=5000000.0;
 	
